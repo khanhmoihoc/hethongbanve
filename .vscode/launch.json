@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Ticket Management System",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "HeThongBanVe",
+            "cwd": "${workspaceFolder}/src",
+            "classpath": ["${workspaceFolder}/src"],
+            "console": "internalConsole",
+            "args": [],
+            "vmArgs": []
+        },
+        {
+            "type": "java", 
+            "name": "Debug Ticket Management System",
+            "request": "launch",
+            "mainClass": "ui.Main",
+            "projectName": "HeThongBanVe",
+            "cwd": "${workspaceFolder}/src",
+            "classpath": ["${workspaceFolder}/src"],
+            "console": "internalConsole",
+            "args": [],
+            "vmArgs": ["-Xdebug"]
+        }
+    ]
+}

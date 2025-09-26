@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  pg:
+    image: postgres
+    container_name: pg_db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: tcthanh1992
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: hethongbanve
+    volumes:
+      - iPostgres_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: iPostgresAdmin4
+    restart: always
+    ports:
+      - "8989:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: tcthanh1992@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: strongpassword
+    volumes:
+      - iPostgresAdmin4_pgadmin:/var/lib/pgadmin
+volumes:
+  iPostgres_pgdata:
+  iPostgresAdmin4_pgadmin:
